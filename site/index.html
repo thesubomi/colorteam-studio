@@ -4,15 +4,364 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Brand Studio by Colorteam (staging)</title>
+<title>Brand Studio by Colorteam | On-brand content, made by your team</title>
+<meta name="description" content="Brand Studio turns your brand system into templates your whole team can use, with comments, approvals and a content calendar built in. Made by Colorteam.">
+<meta property="og:title" content="Brand Studio by Colorteam">
+<meta property="og:description" content="On-brand content, made by your team and approved by you.">
+<meta property="og:image" content="assets/walkthrough-poster.jpg">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;min-height:100vh;display:grid;place-items:center;background:#fafaf8;color:#111;font:400 16px/1.5 Inter,system-ui,-apple-system,sans-serif}
-main{text-align:center;padding:24px}h1{margin:0 0 8px;font-size:32px;letter-spacing:-.02em}p{margin:0;color:#6b6b6b}
-.badge{position:fixed;left:12px;bottom:12px;padding:6px 12px;border-radius:999px;background:#f2b0cd;color:#000;font-weight:600;font-size:12px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
+:root{--bg:#FAFAF9;--panel:#FFFFFF;--soft:#F3F3F1;--line:#E8E8E5;--text:#18181B;--muted:#6E6E76;--faint:#9A9AA2;--pink:#F2B0CD;--pink-ink:#7A2E52;--radius:18px;--max:1120px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.55 Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,video{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.narrow{max-width:600px;margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:44px;padding:0 18px;border-radius:10px;font:600 15px/1 Inter,system-ui,sans-serif;text-decoration:none;border:1px solid transparent;transition:opacity .15s,background .15s}
+.btn-dark{background:var(--text);color:#fff}.btn-dark:hover{opacity:.86}
+.btn-dark span{color:#b9b9c0;font-weight:500}
+.btn-light{background:var(--panel);color:var(--text);border-color:var(--line)}.btn-light:hover{background:var(--soft)}
+.btn-sm{height:36px;padding:0 14px;font-size:14px;border-radius:9px}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(250,250,249,.82);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
+header.scrolled{border-color:var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{height:16px;width:auto}
+.brand b{font-weight:600;font-size:15px;padding-left:10px;border-left:1px solid var(--line)}
+nav.links{display:flex;gap:26px}
+nav.links a{font-size:14px;color:var(--muted);text-decoration:none}nav.links a:hover{color:var(--text)}
+.bar-r{display:flex;align-items:center;gap:8px}
+.login{font-size:14px;font-weight:500;text-decoration:none;padding:0 10px;color:var(--muted)}.login:hover{color:var(--text)}
+
+/* hero */
+.hero{text-align:center;padding-top:72px}
+.switch{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:var(--panel);border:1px solid var(--line);margin-bottom:36px}
+.switch a{padding:7px 18px;border-radius:999px;font-size:14px;font-weight:600;color:var(--muted);text-decoration:none}
+.switch a:hover{color:var(--text)}
+.switch a.on{background:var(--text);color:#fff}
+h1{margin:0 auto;max-width:760px;font-size:clamp(38px,6vw,64px);line-height:1.04;letter-spacing:-.035em;font-weight:700}
+h1 .soft,h2 .soft{color:var(--faint)}
+.lede{max-width:560px;margin:22px auto 0;font-size:19px;line-height:1.5;color:var(--muted)}
+.ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+.trust{margin-top:22px;font-size:13px;color:var(--faint)}
+.trust b{color:var(--muted);font-weight:600}
+.video{margin:56px auto 0;max-width:1040px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 30px 80px -30px rgba(24,24,27,.25)}
+.video video{width:100%;height:auto;aspect-ratio:1440/900;object-fit:cover}
+
+/* sections */
+section{padding:120px 0 0}
+.lead-p{font-size:clamp(22px,2.6vw,28px);line-height:1.3;letter-spacing:-.02em;font-weight:600;margin:0;color:var(--faint)}
+.lead-p b{color:var(--text);font-weight:600}
+h2{margin:0;font-size:clamp(26px,3vw,34px);line-height:1.15;letter-spacing:-.025em;font-weight:600}
+.sec-head{margin-bottom:44px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:999px;background:var(--soft);font-size:13px;font-weight:600;margin-bottom:22px}
+.step h3{margin:0 0 8px;font-size:18px;letter-spacing:-.01em}
+.step p{margin:0;color:var(--muted);font-size:15px}
+
+/* feature rows */
+.feat{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:16px;margin-bottom:16px}
+.feat.flip{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.feat.flip .copy{order:2}
+.copy{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column}
+.copy .ic{width:36px;height:36px;border-radius:10px;background:var(--soft);display:grid;place-items:center;margin-bottom:24px}
+.copy h3{margin:0;font-size:20px;letter-spacing:-.015em}
+.copy h3 + p{margin:6px 0 0;color:var(--muted)}
+.copy ul{list-style:none;margin:auto 0 0;padding:28px 0 0}
+.copy li{font-size:14px;color:var(--muted);padding:10px 0;border-top:1px solid var(--line)}
+.shot{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--soft)}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:left top}
+
+/* small grid */
+.mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
+.mini div{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.mini h4{margin:14px 0 4px;font-size:16px;letter-spacing:-.01em}
+.mini p{margin:0;font-size:14px;color:var(--muted)}
+
+/* templates */
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.chips span{padding:8px 14px;border-radius:999px;background:var(--panel);border:1px solid var(--line);font-size:14px}
+
+/* comparison */
+.table{width:100%;border-collapse:collapse;font-size:15px}
+.table th,.table td{text-align:left;padding:16px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.table thead th{font-size:13px;font-weight:500;color:var(--muted)}
+.table thead th.us{color:var(--text);font-weight:600}
+.table td:first-child{color:var(--muted);font-size:14px;width:22%}
+.table td.us{font-weight:600}
+.scroll-x{overflow-x:auto}
+
+/* pricing */
+.plans{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.plan{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column}
+.plan.setup{background:var(--text);color:#fff;border-color:var(--text)}
+.plan .tag{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.plan.setup .tag{color:var(--pink)}
+.plan h3{margin:10px 0 0;font-size:20px}
+.price{margin:18px 0 4px;font-size:34px;font-weight:700;letter-spacing:-.03em}
+.price small{font-size:15px;font-weight:500;color:var(--muted)}
+.plan.setup .price small{color:#b9b9c0}
+.plan ul{list-style:none;margin:18px 0 24px;padding:0;font-size:14px}
+.plan li{padding:8px 0;border-top:1px solid var(--line);color:var(--muted)}
+.plan.setup li{border-color:#2c2c31;color:#d6d6db}
+.plan .btn{margin-top:auto}
+.plan.setup .btn-light{background:#fff;border-color:#fff}
+.todo{color:var(--faint);font-style:italic}
+.plan-note{margin-top:18px;font-size:14px;color:var(--muted);text-align:center}
+
+/* faq */
+.faq details{background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-bottom:10px}
+.faq summary{list-style:none;cursor:pointer;padding:18px 20px;font-weight:500;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";width:9px;height:9px;border-right:1.6px solid var(--muted);border-bottom:1.6px solid var(--muted);transform:rotate(45deg);transition:transform .2s;flex:none;margin-top:-4px}
+.faq details[open] summary::after{transform:rotate(-135deg);margin-top:4px}
+.faq details p{margin:0;padding:0 20px 18px;color:var(--muted)}
+
+/* final cta */
+.final{margin-top:120px;border-radius:24px;background:var(--panel);border:1px solid var(--line);padding:88px 24px;text-align:center;position:relative;overflow:hidden}
+.final h2{font-size:clamp(28px,3.4vw,40px)}
+.final .ctas{margin-top:26px}
+.final::before{content:"";position:absolute;width:520px;height:320px;left:50%;top:-180px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(242,176,205,.45),rgba(242,176,205,0));pointer-events:none}
+
+footer{padding:56px 0 48px;font-size:13px;color:var(--faint)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.foot nav{display:flex;gap:20px}
+.foot a{text-decoration:none}.foot a:hover{color:var(--text)}
+
+.badge{position:fixed;left:50%;transform:translateX(-50%);bottom:12px;z-index:50;padding:6px 12px;border-radius:999px;background:var(--pink);color:#000;font-weight:600;font-size:12px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
+
+@media (max-width:960px){
+ nav.links{display:none}
+ .plans{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:760px){
+ .hero{padding-top:44px}
+ .table{font-size:13px}
+ .table th,.table td{padding:12px 6px}
+ .table thead th{font-size:12px}
+ .table td:first-child{font-size:12px}
+ .lede{font-size:17px}
+ section{padding-top:88px}
+ .steps,.mini{grid-template-columns:minmax(0,1fr)}
+ .feat,.feat.flip{grid-template-columns:minmax(0,1fr)}
+ .feat.flip .copy{order:0}
+ .shot{aspect-ratio:16/10}
+ .plans{grid-template-columns:minmax(0,1fr)}
+ .login{display:none}
+ .brand b{display:none}
+ .final{padding:64px 20px}
+}
 </style>
 </head>
 <body>
-<main><h1>Brand Studio</h1><p>The Studio site is being built here. Not public yet.</p></main>
-<a class="badge" href="https://staging.colorteam.io">Staging</a>
+
+<header id="top">
+ <div class="wrap bar">
+  <a class="brand" href="#top" aria-label="Brand Studio by Colorteam, back to top"><img src="assets/wordmark-black.svg" alt="colorteam" width="90" height="16"><b>Brand Studio</b></a>
+  <nav class="links" aria-label="Sections">
+   <a href="#how">How it works</a><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+  </nav>
+  <div class="bar-r">
+   <a class="login" href="https://colorteam.io/studio/">Log in</a>
+   <a class="btn btn-dark btn-sm" href="https://calendar.app.google/MSoTdRKrZPzgjE7QA" target="_blank" rel="noopener">Book a demo</a>
+  </div>
+ </div>
+</header>
+
+<main>
+ <div class="wrap hero">
+  <nav class="switch" aria-label="Colorteam sites"><a href="https://staging.colorteam.io/">Agency</a><a class="on" href="#top" aria-current="page">Studio</a></nav>
+  <h1>On-brand, every time. <span class="soft">Made by your team, approved by you.</span></h1>
+  <p class="lede">Brand Studio turns your brand into ready-made templates. Your team creates posts, thumbnails and proposals in minutes, and nothing goes out until you approve it.</p>
+  <div class="ctas">
+   <a class="btn btn-dark" href="https://calendar.app.google/MSoTdRKrZPzgjE7QA" target="_blank" rel="noopener">Book a demo <span>· it's free</span></a>
+   <a class="btn btn-light" href="#pricing">See pricing</a>
+  </div>
+  <p class="trust">Built by <b>Colorteam</b>, the design team behind NECLive, AfrOstrava and Kingdom Life.</p>
+  <div class="video">
+   <video autoplay muted loop playsinline preload="metadata" poster="assets/walkthrough-poster.jpg" aria-label="Brand Studio walkthrough: start from a template, edit, change style, review and approve, plan on the calendar">
+    <source src="assets/walkthrough.webm" type="video/webm">
+    <source src="assets/walkthrough.mp4" type="video/mp4">
+   </video>
+  </div>
+ </div>
+
+ <section>
+  <div class="wrap narrow">
+   <p class="lead-p"><b>What is Brand Studio?</b> A private design studio built around your brand. We turn your logo, colours, type and layouts into templates your team can fill in. You review every piece, and everything that goes out looks like you.</p>
+  </div>
+ </section>
+
+ <section id="how">
+  <div class="wrap">
+   <div class="narrow sec-head"><h2>How it works. <span class="soft">We build it, your team runs it, you sign off.</span></h2></div>
+   <div class="steps">
+    <div class="step"><span class="n">1</span><h3>We build your Studio</h3><p>Colorteam turns your brand into templates, styles and a brand guidelines page. No brand yet? We design it first.</p></div>
+    <div class="step"><span class="n">2</span><h3>Your team creates</h3><p>Pick a template, type the words, add a photo. Feed, story and thumbnail sizes come out together.</p></div>
+    <div class="step"><span class="n">3</span><h3>You approve</h3><p>Comment on the design, request changes or approve in one click. Then plan it on the calendar.</p></div>
+   </div>
+  </div>
+ </section>
+
+ <section id="features">
+  <div class="wrap">
+   <div class="narrow sec-head"><h2>Everything in one place. <span class="soft">From first draft to approved and scheduled.</span></h2></div>
+
+   <div class="feat">
+    <div class="copy">
+     <div class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+     <h3>Templates for everything</h3>
+     <p>Every format your brand needs, designed by Colorteam and locked to your system.</p>
+     <ul><li>Social posts, carousels, stories and reel covers</li><li>YouTube thumbnails and LinkedIn banners</li><li>Proposals and documents, exported as PDF</li></ul>
+    </div>
+    <div class="shot"><img src="assets/shot-home.webp" alt="Brand Studio home: live teammates, a file waiting for approval and a row of templates" loading="lazy" width="1440" height="900"></div>
+   </div>
+
+   <div class="feat flip">
+    <div class="copy">
+     <div class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></div>
+     <h3>Review built in</h3>
+     <p>Feedback lives on the design, not in email threads.</p>
+     <ul><li>Comments pinned to the exact spot, with @mentions</li><li>Request changes or approve in one click</li><li>See who's editing and jump in live</li></ul>
+    </div>
+    <div class="shot"><img src="assets/shot-comments.webp" alt="A quote card open in the editor with a comment thread and the Approve button" loading="lazy" width="1440" height="900"></div>
+   </div>
+
+   <div class="feat">
+    <div class="copy">
+     <div class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div>
+     <h3>Plan the month</h3>
+     <p>Drag finished pieces onto a content calendar so everyone knows what goes out when.</p>
+     <ul><li>Month view with every scheduled post</li><li>Unscheduled drafts kept to one side</li></ul>
+    </div>
+    <div class="shot"><img src="assets/shot-calendar.webp" alt="Content calendar for October with scheduled posts and an unscheduled list" loading="lazy" width="1440" height="900"></div>
+   </div>
+
+   <div class="feat flip">
+    <div class="copy">
+     <div class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2.5zM20 19v2H6"/></svg></div>
+     <h3>Your guidelines, inside</h3>
+     <p>Colours, type, logo and imagery rules sit next to the work, so nobody has to go looking.</p>
+     <ul><li>A browsable brand guidelines page</li><li>The full guide as a PDF download</li></ul>
+    </div>
+    <div class="shot"><img src="assets/shot-guidelines.webp" alt="Brand guidelines page showing the colour palette" loading="lazy" width="1440" height="900"></div>
+   </div>
+
+   <div class="mini">
+    <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="9" height="12" rx="1.5"/><rect x="13" y="3" width="9" height="18" rx="1.5"/></svg><h4>Every size at once</h4><p>Edit once and get the feed, story and thumbnail versions together.</p></div>
+    <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><h4>Export in a click</h4><p>PNG for social, PDF for proposals and documents.</p></div>
+    <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5M12 7v5l3 2"/></svg><h4>Version history</h4><p>Go back to any earlier version of a file.</p></div>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap">
+   <div class="narrow sec-head" style="text-align:center"><h2>Built for your formats. <span class="soft">Templates ready on day one, more designed as you grow.</span></h2></div>
+   <div class="chips narrow">
+    <span>Podcast guest announcement</span><span>Quote card</span><span>Carousel</span><span>Reel cover</span><span>Story</span><span>Team spotlight</span><span>YouTube thumbnail</span><span>LinkedIn banner</span><span>Highlight covers</span><span>Event and webinar</span><span>Hiring post</span><span>Case study</span><span>Proposal</span>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap narrow">
+   <div class="sec-head"><h2>Three ways to make content. <span class="soft">One of them keeps you on brand without slowing you down.</span></h2></div>
+   <div class="scroll-x">
+    <table class="table">
+     <thead><tr><th scope="col"></th><th scope="col">Freelance designer</th><th scope="col">Generic design tool</th><th scope="col" class="us">Brand Studio</th></tr></thead>
+     <tbody>
+      <tr><td>On brand</td><td>When they have time</td><td>Depends who's designing</td><td class="us">Every time</td></tr>
+      <tr><td>Turnaround</td><td>Days</td><td>Minutes</td><td class="us">Minutes</td></tr>
+      <tr><td>Approvals</td><td>Email and chat</td><td>Varies</td><td class="us">Built in</td></tr>
+      <tr><td>Made for your brand</td><td>Yes</td><td>Generic templates</td><td class="us">Designed by Colorteam</td></tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+ </section>
+
+ <section id="pricing">
+  <div class="wrap">
+   <div class="narrow sec-head"><h2>Simple pricing. <span class="soft">A one-off setup, then a monthly plan.</span></h2></div>
+   <div class="plans">
+    <div class="plan setup">
+     <span class="tag">Start here</span>
+     <h3>Studio setup</h3>
+     <div class="price">[PRICE] <small>one-off</small></div>
+     <ul><li>Your brand built into templates</li><li>Brand guidelines page</li><li>Team invites and onboarding</li></ul>
+     <a class="btn btn-light" href="https://calendar.app.google/MSoTdRKrZPzgjE7QA" target="_blank" rel="noopener">Book a demo</a>
+    </div>
+    <div class="plan">
+     <span class="tag">Monthly</span>
+     <h3>[Plan name]</h3>
+     <div class="price">[PRICE] <small>/ month</small></div>
+     <ul><li class="todo">[Feature]</li><li class="todo">[Feature]</li><li class="todo">[Feature]</li></ul>
+     <a class="btn btn-light" href="https://calendar.app.google/MSoTdRKrZPzgjE7QA" target="_blank" rel="noopener">Book a demo</a>
+    </div>
+    <div class="plan">
+     <span class="tag">Monthly</span>
+     <h3>[Plan name]</h3>
+     <div class="price">[PRICE] <small>/ month</small></div>
+     <ul><li class="todo">[Feature]</li><li class="todo">[Feature]</li><li class="todo">[Feature]</li></ul>
+     <a class="btn btn-dark" href="https://calendar.app.google/MSoTdRKrZPzgjE7QA" target="_blank" rel="noopener">Book a demo</a>
+    </div>
+    <div class="plan">
+     <span class="tag">Monthly</span>
+     <h3>[Plan name]</h3>
+     <div class="price">[PRICE] <small>/ month</small></div>
+     <ul><li class="todo">[Feature]</li><li class="todo">[Feature]</li><li class="todo">[Feature]</li></ul>
+     <a class="btn btn-light" href="https://calendar.app.google/MSoTdRKrZPzgjE7QA" target="_blank" rel="noopener">Book a demo</a>
+    </div>
+   </div>
+   <p class="plan-note">Every plan starts with a free 20-minute demo, so we can show you the Studio with your brand in mind.</p>
+  </div>
+ </section>
+
+ <section id="faq">
+  <div class="wrap narrow faq">
+   <div class="sec-head" style="text-align:center"><h2>Questions? <span class="soft">We have answers.</span></h2></div>
+   <details><summary>What exactly is Brand Studio?</summary><p>A private, browser-based design studio set up around your brand. Colorteam builds your templates and guidelines into it, and your team uses it to create on-brand content that you approve before it goes out.</p></details>
+   <details><summary>Do I need a brand already?</summary><p>No. If you don't have a brand system yet, Colorteam designs one first and then builds it into your Studio.</p></details>
+   <details><summary>Who designs the templates?</summary><p>Colorteam's designers. Each template is built from your brand, so your team can change the words and photos without breaking the design. Need a format we haven't built yet? Ask us.</p></details>
+   <details><summary>Can my whole team use it?</summary><p>Yes. You invite people by email, and you decide who can approve work.</p></details>
+   <details><summary>What can I export?</summary><p>PNG images for social media and PDF for documents such as proposals.</p></details>
+   <details><summary>How much does it cost?</summary><p>A one-off setup fee to build your Studio, then a monthly plan. See the pricing above, or book a demo and we'll talk it through.</p></details>
+  </div>
+ </section>
+
+ <div class="wrap">
+  <div class="final">
+   <h2>Start now. <span class="soft">Content that looks like you, every time.</span></h2>
+   <div class="ctas"><a class="btn btn-dark" href="https://calendar.app.google/MSoTdRKrZPzgjE7QA" target="_blank" rel="noopener">Book a demo <span>· it's free</span></a></div>
+  </div>
+ </div>
+</main>
+
+<footer>
+ <div class="wrap foot">
+  <span>© 2026 Colorteam. Brand Studio is made by Colorteam.</span>
+  <nav aria-label="Footer"><a href="https://staging.colorteam.io/">Agency</a><a href="https://colorteam.io/privacy/">Privacy</a><a href="https://colorteam.io/studio/">Log in</a></nav>
+ </div>
+</footer>
+
+<a class="badge" href="https://staging.colorteam.io/" title="This is the staging site">Staging</a>
+
+<script>
+(function(){var h=document.querySelector('header');function s(){h.classList.toggle('scrolled',window.scrollY>8)}addEventListener('scroll',s,{passive:true});s();
+var v=document.querySelector('.video video');if(v&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();v.controls=true;}})();
+</script>
 </body>
 </html>
