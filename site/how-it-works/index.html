@@ -14,14 +14,14 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 
 <header id="top">
  <div class="wrap bar">
-  <a class="brand" href="/" aria-label="Colorteam Studio, home"><img src="/assets/wordmark-black.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a>
+  <a class="brand" href="/" aria-label="Colorteam Studio, home"><img src="/assets/wordmark-white.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a>
   <nav class="links" aria-label="Pages"><a href="/how-it-works/" class="on" aria-current="page">How it works</a><a href="/pricing/">Pricing</a><a href="/about/">About</a></nav>
   <div class="bar-r">
    <a class="login" href="https://colorteam.io/studio/">Log in</a>
@@ -32,7 +32,7 @@
 
 <main>
 
- <div class="wrap page-hero">
+ <div class="band dark page-hero"><div class="rail"><div>
   <span class="eyebrow">How it works</span>
   <h1>From brand guidelines to a full calendar <span class="soft">in under two weeks.</span></h1>
   <p class="lede">Here is exactly what happens between the day you sign up and the day your first campaign goes live.</p>
@@ -42,10 +42,10 @@
     <div class="step"><span class="n">3</span><h3>Connect your channels</h3><p>Scheduling and analytics.</p></div>
     <div class="step"><span class="n">4</span><h3>Post</h3><p>Approve the calendar, ship.</p></div>
   </div>
- </div>
+ </div></div></div>
 
  <section>
-  <div class="wrap prose">
+  <div class="rail"><div class="prose">
    <h2>Step 1: Upload your brand guidelines</h2>
    <h3>If you have them</h3>
    <p>Drop in your playbook, logo files and any assets you're proud of. Studio reads it and builds your templates from it. A designer checks the first batch so nothing drifts. You're at step two in days.</p>
@@ -70,7 +70,7 @@
    <h2>After launch</h2>
    <p>Each week Studio proposes the next batch. You approve in one sitting. On Growth, a Colorteam designer reviews every campaign before it reaches you. On Max, a named reviewer owns the account and you can stop logging in.</p>
    <p><b>Time you spend:</b> about twenty minutes a week on Core. Less on Growth. Close to zero on Max.</p>
-  </div>
+  </div></div>
  </section>
 
  <div class="wrap">
@@ -82,10 +82,10 @@
 
 </main>
 
-<footer>
+<footer class="dark">
  <div class="wrap">
   <div class="foot-grid">
-   <div><a class="brand" href="/" style="margin-bottom:14px"><img src="/assets/wordmark-black.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a><p>A content system that learns your brand, designs on-brand posts and ships them to every channel. Set up by Colorteam, run by you.</p></div>
+   <div><a class="brand" href="/" style="margin-bottom:16px"><img src="/assets/wordmark-white.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a><p>A content system that learns your brand, designs on-brand posts and ships them to every channel. Set up by Colorteam, run by you.</p></div>
    <div><h5>Product</h5><a href="/how-it-works/">How it works</a><a href="/pricing/">Pricing</a><a href="/brand-foundation/">Brand Foundation</a><a href="/integrations/">Integrations</a><a href="/faq/">FAQ</a></div>
    <div><h5>Company</h5><a href="/about/">About</a><a href="/book/">Book a call</a><a href="/contact/">Contact</a><a href="https://staging.colorteam.io/">Agency site</a></div>
    <div><h5>Legal</h5><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="https://colorteam.io/studio/">Log in</a></div>
@@ -95,11 +95,7 @@
 </footer>
 
 <a class="badge" href="https://staging.colorteam.io/" title="This is the staging site">Staging</a>
-
-<script>
-(function(){var h=document.querySelector('header');function s(){h.classList.toggle('scrolled',window.scrollY>8)}addEventListener('scroll',s,{passive:true});s();
-var v=document.querySelector('.video video');if(v&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();v.controls=true;}})();
-</script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.18/lenis.min.js" defer></script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

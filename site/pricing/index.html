@@ -14,14 +14,14 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 
 <header id="top">
  <div class="wrap bar">
-  <a class="brand" href="/" aria-label="Colorteam Studio, home"><img src="/assets/wordmark-black.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a>
+  <a class="brand" href="/" aria-label="Colorteam Studio, home"><img src="/assets/wordmark-white.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a>
   <nav class="links" aria-label="Pages"><a href="/how-it-works/">How it works</a><a href="/pricing/" class="on" aria-current="page">Pricing</a><a href="/about/">About</a></nav>
   <div class="bar-r">
    <a class="login" href="https://colorteam.io/studio/">Log in</a>
@@ -32,14 +32,14 @@
 
 <main>
 
- <div class="wrap page-hero">
+ <div class="band dark page-hero"><div class="rail"><div>
   <span class="eyebrow">Pricing</span>
   <h1>Your brand, on every channel, <span class="soft">without the back and forth.</span></h1>
   <p class="lede">One Brand Foundation to define your taste. One subscription to keep it showing up. Pick the tier that matches how much you want to hand over.</p>
- </div>
+ </div></div></div>
 
  <section style="padding-top:64px">
-  <div class="wrap">
+  <div class="rail"><div class="">
    <div class="plans three">
 
     <div class="plan" data-plan="core" data-found="990" data-setup="330" data-link-base="https://buy.stripe.com/test_dRmaEWgX77cVbSE5MrgEg00" data-link-addon="https://buy.stripe.com/test_cNi14mcGR7cVg8U5MrgEg01" data-link-setup="https://buy.stripe.com/test_3cIdR8gX78gZf4QeiXgEg04">
@@ -85,7 +85,7 @@
     <div class="card"><h3>Already have brand guidelines?</h3><p>You don't pay for a Brand Foundation. Instead, you pay a one-time Studio Setup fee: $330 on Core, $490 on Growth, $830 on Max. This covers a Colorteam designer reading your playbook, building your Studio templates from it, connecting your channels and checking the first batch of posts. After that, you pay only the monthly subscription.</p><p style="margin-top:12px">Example: an early-stage startup with its own guidelines joining Core pays $330 once, then $149 a month.</p></div>
     <div class="card"><h3>Why no free plan?</h3><p>Free plans show you what the AI can do. We'd rather show you what your brand looks like when someone with taste sets it up. Try Core for 14 days at the monthly rate. Move to annual and the Foundation fee is waived.</p></div>
    </div>
-  </div>
+  </div></div>
  </section>
 
  <div class="wrap">
@@ -97,10 +97,10 @@
 
 </main>
 
-<footer>
+<footer class="dark">
  <div class="wrap">
   <div class="foot-grid">
-   <div><a class="brand" href="/" style="margin-bottom:14px"><img src="/assets/wordmark-black.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a><p>A content system that learns your brand, designs on-brand posts and ships them to every channel. Set up by Colorteam, run by you.</p></div>
+   <div><a class="brand" href="/" style="margin-bottom:16px"><img src="/assets/wordmark-white.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a><p>A content system that learns your brand, designs on-brand posts and ships them to every channel. Set up by Colorteam, run by you.</p></div>
    <div><h5>Product</h5><a href="/how-it-works/">How it works</a><a href="/pricing/">Pricing</a><a href="/brand-foundation/">Brand Foundation</a><a href="/integrations/">Integrations</a><a href="/faq/">FAQ</a></div>
    <div><h5>Company</h5><a href="/about/">About</a><a href="/book/">Book a call</a><a href="/contact/">Contact</a><a href="https://staging.colorteam.io/">Agency site</a></div>
    <div><h5>Legal</h5><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="https://colorteam.io/studio/">Log in</a></div>
@@ -110,26 +110,7 @@
 </footer>
 
 <a class="badge" href="https://staging.colorteam.io/" title="This is the staging site">Staging</a>
-
-<script>
-(function(){var h=document.querySelector('header');function s(){h.classList.toggle('scrolled',window.scrollY>8)}addEventListener('scroll',s,{passive:true});s();
-var v=document.querySelector('.video video');if(v&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();v.controls=true;}})();
-</script>
-<script>
-(function(){document.querySelectorAll('.plan').forEach(function(p){
- var found=+p.dataset.found, setup=+p.dataset.setup||0;
- var add=p.querySelector('.toggle input[data-add]'), guide=p.querySelector('.toggle input[data-guidelines]');
- var out=p.querySelector('.total-amt'), btn=p.querySelector('a[data-stripe]');
- if(!out)return;
- function u(){
-  var hasGuide=guide&&guide.checked, hasAdd=add&&add.checked;
-  if(add){add.disabled=!!hasGuide; if(hasGuide){add.checked=false;hasAdd=false;} add.closest('.toggle').style.opacity=hasGuide?.45:1;}
-  var t=hasGuide?setup:found+(hasAdd?+add.dataset.add:0);
-  out.textContent=t.toLocaleString('en-US');
-  if(btn){btn.href=hasGuide?p.dataset.linkSetup:(hasAdd?p.dataset.linkAddon:p.dataset.linkBase);}
- }
- add&&add.addEventListener('change',u); guide&&guide.addEventListener('change',u); u();
-});})();
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.18/lenis.min.js" defer></script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

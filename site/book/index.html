@@ -14,14 +14,14 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 
 <header id="top">
  <div class="wrap bar">
-  <a class="brand" href="/" aria-label="Colorteam Studio, home"><img src="/assets/wordmark-black.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a>
+  <a class="brand" href="/" aria-label="Colorteam Studio, home"><img src="/assets/wordmark-white.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a>
   <nav class="links" aria-label="Pages"><a href="/how-it-works/">How it works</a><a href="/pricing/">Pricing</a><a href="/about/">About</a></nav>
   <div class="bar-r">
    <a class="login" href="https://colorteam.io/studio/">Log in</a>
@@ -32,13 +32,13 @@
 
 <main>
 
- <div class="wrap page-hero">
+ <div class="band dark page-hero"><div class="rail"><div>
   <span class="eyebrow">Book a call</span>
   <h1>Fifteen minutes. <span class="soft">No pitch.</span></h1>
   <p class="lede">Tell us where your brand is and where you want it to be. We'll tell you which tier fits, what the Foundation would cover, and when you could be live.</p>
- </div>
+ </div></div></div>
  <section style="padding-top:56px">
-  <div class="wrap contact-grid">
+  <div class="rail"><div class="contact-grid">
    <div class="card">
     <h3>What we'll cover</h3>
     <ul style="list-style:none;padding:0;margin:14px 0 0">
@@ -51,15 +51,15 @@
    </div>
    <div class="form"><div class="hs-form-frame" data-region="eu1" data-form-id="db30d4bb-d456-4143-a746-4e4e57fbeefe" data-portal-id="145992220"></div>
    <script src="https://js-eu1.hsforms.net/forms/embed/145992220.js" defer></script></div>
-  </div>
+  </div></div>
  </section>
 
 </main>
 
-<footer>
+<footer class="dark">
  <div class="wrap">
   <div class="foot-grid">
-   <div><a class="brand" href="/" style="margin-bottom:14px"><img src="/assets/wordmark-black.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a><p>A content system that learns your brand, designs on-brand posts and ships them to every channel. Set up by Colorteam, run by you.</p></div>
+   <div><a class="brand" href="/" style="margin-bottom:16px"><img src="/assets/wordmark-white.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a><p>A content system that learns your brand, designs on-brand posts and ships them to every channel. Set up by Colorteam, run by you.</p></div>
    <div><h5>Product</h5><a href="/how-it-works/">How it works</a><a href="/pricing/">Pricing</a><a href="/brand-foundation/">Brand Foundation</a><a href="/integrations/">Integrations</a><a href="/faq/">FAQ</a></div>
    <div><h5>Company</h5><a href="/about/">About</a><a href="/book/">Book a call</a><a href="/contact/">Contact</a><a href="https://staging.colorteam.io/">Agency site</a></div>
    <div><h5>Legal</h5><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="https://colorteam.io/studio/">Log in</a></div>
@@ -69,11 +69,7 @@
 </footer>
 
 <a class="badge" href="https://staging.colorteam.io/" title="This is the staging site">Staging</a>
-
-<script>
-(function(){var h=document.querySelector('header');function s(){h.classList.toggle('scrolled',window.scrollY>8)}addEventListener('scroll',s,{passive:true});s();
-var v=document.querySelector('.video video');if(v&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();v.controls=true;}})();
-</script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.18/lenis.min.js" defer></script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

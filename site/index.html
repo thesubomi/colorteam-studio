@@ -14,14 +14,14 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 
 <header id="top">
  <div class="wrap bar">
-  <a class="brand" href="/" aria-label="Colorteam Studio, home"><img src="/assets/wordmark-black.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a>
+  <a class="brand" href="/" aria-label="Colorteam Studio, home"><img src="/assets/wordmark-white.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a>
   <nav class="links" aria-label="Pages"><a href="/how-it-works/">How it works</a><a href="/pricing/">Pricing</a><a href="/about/">About</a></nav>
   <div class="bar-r">
    <a class="login" href="https://colorteam.io/studio/">Log in</a>
@@ -32,134 +32,149 @@
 
 <main>
 
- <div class="wrap hero">
-  <nav class="switch" aria-label="Colorteam sites"><a href="https://staging.colorteam.io/">Agency</a><a class="on" href="/" aria-current="page">Studio</a></nav>
-  <h1>Look like nobody else. <span class="soft">Post like you have a team.</span></h1>
-  <p class="lede">Studio is a content system that learns your brand, designs on-brand posts and ships them to every channel in minutes. Set up by Colorteam, run by you.</p>
-  <div class="ctas"><a class="btn btn-dark" href="/pricing/">See pricing</a><a class="btn btn-light" href="#walkthrough">Watch how it works (2 min)</a></div>
-  <p class="trust">Built by <b>Colorteam</b>, the design team behind NECLive, AfrOstrava and Kingdom Life.</p>
-  <div class="video" id="walkthrough">
-   <video autoplay muted loop playsinline preload="metadata" poster="/assets/walkthrough-poster.jpg" aria-label="Studio walkthrough: start from a template, edit, change style, review and approve, plan on the calendar">
+<div class="band dark hero" data-title="Studio">
+ <div class="grid-tex"></div><div class="glow"></div>
+ <div class="rail">
+  <div class="hero-top" data-reveal>
+   <nav class="switch dark" aria-label="Colorteam sites"><a href="https://staging.colorteam.io/">Agency</a><a class="on" href="/" aria-current="page">Studio</a></nav>
+  </div>
+  <div class="hero-grid">
+   <div>
+    <h1 data-reveal="1">Look like nobody else.<br><span class="l2">Post like you have a team.</span></h1>
+   </div>
+   <div data-reveal="2">
+    <p class="lede">Studio is a content system that learns your brand, designs on-brand posts and ships them to every channel in minutes. Set up by Colorteam, run by you.</p>
+    <div class="ctas"><a class="btn btn-dark" href="/pricing/">See pricing</a><a class="btn btn-light" href="#walkthrough">Watch how it works</a></div>
+    <p class="trust" style="margin-top:28px">Built by <b>Colorteam</b>, the design team behind NECLive, AfrOstrava and Kingdom Life.</p>
+   </div>
+  </div>
+  <div class="video" id="walkthrough" data-reveal="3" style="padding:0">
+   <video autoplay muted loop playsinline preload="metadata" poster="/assets/walkthrough-poster.jpg" aria-label="Studio walkthrough">
     <source src="/assets/walkthrough.webm" type="video/webm">
     <source src="/assets/walkthrough.mp4" type="video/mp4">
    </video>
   </div>
  </div>
+</div>
 
- <section id="problem">
-  <div class="wrap">
-   <div class="narrow sec-head"><h2>Every AI startup looks the same. <span class="soft">Most of them have stopped posting.</span></h2></div>
-   <div class="split">
-    <div class="card"><h3>The differentiation problem</h3><p>You built a product in a weekend. Your website shipped with the same fonts, the same gradients and the same layout as the last fifty startups that used the same tool. Nobody can tell you apart.</p></div>
-    <div class="card"><h3>The distribution problem</h3><p>And if you did get a brand together, the posting never stuck. Every post means deciding what to say, opening a design tool, writing captions for four channels and finding the time to schedule it. So the feed goes quiet.</p></div>
-   </div>
-   <blockquote class="quote">Differentiation gets you noticed. Distribution keeps you there. Most founders have neither.</blockquote>
+<section class="band" id="problem" data-title="The problem">
+ <div class="rail"><div>
+  <span class="eyebrow" style="text-align:center">The problem</span>
+  <p class="statement">Every AI startup looks the same. Most of them have stopped posting. Not because the product is bad. Because nobody decided what the brand should <span class="mark">look</span> like, and every post costs an hour nobody has.</p>
+ </div></div>
+</section>
+
+<div class="rail"><div class="hr"></div></div>
+
+<section class="band" id="what" data-title="What Studio is">
+ <div class="rail"><div>
+  <span class="eyebrow" style="text-align:center">What Studio is</span>
+  <p class="statement">Differentiation and distribution, in one system. A brand with a point of view, built by Colorteam. Then posts, carousels, videos and landing pages that carry it, designed, captioned and scheduled without you opening a design <span class="mark">tool.</span></p>
+  <p class="small" style="text-align:center;margin-top:40px">It is not a template library. It is your brand, encoded, with a designer's eye on the way out.</p>
+ </div></div>
+</section>
+
+<section class="band tight" id="how" data-title="How it works">
+ <div class="rail"><div>
+  <div class="sec-head" data-reveal><span class="eyebrow">How it works</span><h2>Four steps. One of them is optional.</h2></div>
+  <div class="steps" data-reveal="1">
+   <div class="step"><span class="n">01</span><span class="pill">Colorteam plugs in here</span><h3>Upload your brand guidelines</h3><p>Don't have any? We define your taste first, because everything Studio makes is built on top of it.</p></div>
+   <div class="step"><span class="n">02</span><h3>We set up your Studio</h3><p>Your design system goes in. Templates for every format come out. A designer checks the first batch before you see it.</p></div>
+   <div class="step"><span class="n">03</span><h3>Connect your channels</h3><p>LinkedIn, Instagram, X, TikTok and your analytics, through the connectors you already use.</p></div>
+   <div class="step"><span class="n">04</span><h3>Post</h3><p>Pick a campaign direction, approve the calendar, ship. Three to four posts a week, every week, without the Sunday-night scramble.</p></div>
   </div>
- </section>
+  <p class="small" style="margin-top:20px"><a class="link" href="/how-it-works/">See the full process</a></p>
+ </div></div>
+</section>
 
- <section id="what">
-  <div class="wrap narrow">
-   <p class="lead-p"><b>Differentiation and distribution, in one system.</b> Studio gives your brand a point of view: a design system built by Colorteam that makes everything you publish recognisably yours. Then it turns that system into output: posts, carousels, videos and landing pages, designed, captioned and scheduled without you opening a design tool.</p>
-   <p class="lead-p" style="margin-top:24px">It is not a template library. It is your brand, encoded, with a designer's eye on the way out.</p>
+<section class="band tight" id="features" data-title="What you get">
+ <div class="rail"><div>
+  <div class="sec-head" data-reveal><span class="eyebrow">What you get</span><h2>Everything between the idea and the post.</h2></div>
+  <div class="groups" data-reveal="1">
+   <div class="group"><h3>Stay recognisable</h3><ul><li>A design system built around your brand, not a template pack</li><li>Logo, type, colour and spacing rules Studio never breaks</li><li>Every format covered: stills, carousels, short-form video, talking-head video, ads</li></ul></div>
+   <div class="group"><h3>Ship faster</h3><ul><li>Campaign directions recommended from your goals</li><li>A weekly calendar you approve in one sitting, then edit as you like</li><li>Copy written for every channel, in your voice</li><li>Scheduling through Metricool and the connectors you choose</li></ul></div>
+   <div class="group"><h3>Know what worked</h3><ul><li>A performance benchmark on every post before you publish</li><li>UTM links generated automatically so you know where traffic came from</li><li>GA4 connected, so the campaign shows up as site visits, not just likes</li><li>A landing page for every campaign, because the goal is a sale, not a scroll</li></ul></div>
   </div>
- </section>
+ </div></div>
+</section>
 
- <section id="how">
-  <div class="wrap">
-   <div class="narrow sec-head"><h2>Four steps. <span class="soft">One of them is optional.</span></h2></div>
-   <div class="steps four">
-    <div class="step"><span class="n">1</span><h3>Upload your brand guidelines <span class="pill">Colorteam plugs in here</span></h3><p>Don't have any? This is where Colorteam comes in. We define your taste first, because everything Studio makes is built on top of it.</p></div>
-    <div class="step"><span class="n">2</span><h3>We set up your Studio</h3><p>Your design system goes in. Templates for every format come out. A designer checks the first batch before you see it.</p></div>
-    <div class="step"><span class="n">3</span><h3>Connect your channels</h3><p>LinkedIn, Instagram, X, TikTok and your analytics, through the connectors you already use.</p></div>
-    <div class="step"><span class="n">4</span><h3>Post</h3><p>Pick a campaign direction, approve the calendar, ship. Three to four posts a week, every week, without the Sunday-night scramble.</p></div>
-   </div>
-   <p class="plan-note"><a class="link" href="/how-it-works/">See the full process</a></p>
+<section class="band tight" id="who" data-title="Who it's for">
+ <div class="rail"><div>
+  <div class="sec-head" data-reveal><span class="eyebrow">Who it's for</span><h2>Two kinds of founder. One system.</h2></div>
+  <div class="split" data-reveal="1">
+   <div class="card"><h3>You built it with AI</h3><p>Your product exists. Your brand doesn't yet. The site uses the defaults, the socials are empty, and you know it. Start with a Brand Foundation and Studio takes it from there.</p><a class="btn btn-dark" href="/brand-foundation/">Start from scratch</a></div>
+   <div class="card fill"><h3>You have a brand, you don't have time</h3><p>Guidelines, done. Accounts, set up. Traction, starting. What's missing is the hours to turn all that into content every week. Upload your playbook and Studio is running in days.</p><a class="btn btn-light" href="/pricing/">Bring your brand</a></div>
   </div>
- </section>
+ </div></div>
+</section>
 
- <section id="features">
-  <div class="wrap">
-   <div class="narrow sec-head"><h2>Everything between the idea and the post.</h2></div>
-   <div class="groups">
-    <div class="group"><h3>Stay recognisable</h3><ul><li>A design system built around your brand, not a template pack</li><li>Logo, type, colour and spacing rules Studio never breaks</li><li>Every format covered: stills, carousels, short-form video, talking-head video, ads</li></ul></div>
-    <div class="group"><h3>Ship faster</h3><ul><li>Campaign directions recommended from your goals</li><li>A weekly calendar you approve in one sitting, then edit as you like</li><li>Copy written for every channel, in your voice</li><li>Scheduling through Metricool and the connectors you choose</li></ul></div>
-    <div class="group"><h3>Know what worked</h3><ul><li>A performance benchmark on every post before you publish</li><li>UTM links generated automatically so you know where traffic came from</li><li>GA4 connected, so the campaign shows up as site visits, not just likes</li><li>A landing page for every campaign, because the goal is a sale, not a scroll</li></ul></div>
-   </div>
+<section class="band" id="why" data-title="Taste">
+ <div class="rail"><div>
+  <span class="eyebrow" style="text-align:center">Why Colorteam</span>
+  <p class="statement">Taste is the part AI can't do alone. Nine years of making brands recognisable is built into every Studio setup. The AI handles the volume. We handle the <span class="mark">taste.</span></p>
+  <div class="pairs">
+   <figure class="pair" data-reveal>
+    <figcaption><b>Northline Summit</b><span>Event. Sample brand.</span></figcaption>
+    <div class="pair-img"><img src="/assets/pair-event-before.webp" alt="Northline Summit, before: a generic AI-tool default design" loading="lazy" width="1200" height="900"><span>Before</span></div>
+    <div class="pair-img"><img src="/assets/pair-event-after.webp" alt="Northline Summit, after a Brand Foundation" loading="lazy" width="1200" height="900"><span class="on">After</span></div>
+   </figure>
+   <figure class="pair" data-reveal>
+    <figcaption><b>Kolo</b><span>Streaming. Sample brand.</span></figcaption>
+    <div class="pair-img"><img src="/assets/pair-stream-before.webp" alt="Kolo, before: a generic AI-tool default design" loading="lazy" width="1200" height="900"><span>Before</span></div>
+    <div class="pair-img"><img src="/assets/pair-stream-after.webp" alt="Kolo, after a Brand Foundation" loading="lazy" width="1200" height="900"><span class="on">After</span></div>
+   </figure>
+   <figure class="pair" data-reveal>
+    <figcaption><b>Ledgerly</b><span>SaaS. Sample brand.</span></figcaption>
+    <div class="pair-img"><img src="/assets/pair-saas-before.webp" alt="Ledgerly, before: a generic AI-tool default design" loading="lazy" width="1200" height="900"><span>Before</span></div>
+    <div class="pair-img"><img src="/assets/pair-saas-after.webp" alt="Ledgerly, after a Brand Foundation" loading="lazy" width="1200" height="900"><span class="on">After</span></div>
+   </figure>
   </div>
- </section>
+  <p class="pairs-note">Sample brands, built to show the shift. Real Foundations appear here as they launch.</p>
+ </div></div>
+</section>
 
- <section id="who">
-  <div class="wrap">
-   <div class="narrow sec-head"><h2>Two kinds of founder. <span class="soft">One system.</span></h2></div>
-   <div class="split">
-    <div class="card"><h3>You built it with AI</h3><p>Your product exists. Your brand doesn't yet. The site uses the defaults, the socials are empty, and you know it. Start with a Brand Foundation and Studio takes it from there.</p><a class="btn btn-dark" href="/brand-foundation/">Start from scratch</a></div>
-    <div class="card"><h3>You have a brand, you don't have time</h3><p>Guidelines, done. Accounts, set up. Traction, starting. What's missing is the hours to turn all that into content every week. Upload your playbook and Studio is running in days.</p><a class="btn btn-light" href="/pricing/">Bring your brand</a></div>
-   </div>
+<section class="band dark" id="pricing" data-title="Pricing">
+ <div class="rail"><div>
+  <div class="sec-head" data-reveal><span class="eyebrow">Pricing</span><h2>One Foundation. One subscription.<br>Pick how much you hand over.</h2></div>
+  <div class="tiers" data-reveal="1">
+   <div class="tier"><span class="tag">Core</span><div class="price">$149<small>/ month</small></div><p>You approve and ship. Studio does the rest.</p></div>
+   <div class="tier"><span class="tag">Growth</span><div class="price">$349<small>/ month</small></div><p>Campaigns with landing pages, and a designer reviews each one.</p></div>
+   <div class="tier"><span class="tag">Max</span><div class="price">$799<small>/ month</small></div><p>A named reviewer owns your account. You stop logging in.</p></div>
   </div>
- </section>
+  <p class="small" style="margin-top:24px">Already have brand guidelines? Skip the Foundation and pay a one-time setup fee instead. <a class="link" href="/pricing/">See full pricing</a></p>
+ </div></div>
+</section>
 
- <section id="why">
-  <div class="wrap">
-   <div class="narrow sec-head"><h2>Taste is the part AI can't do alone.</h2></div>
-   <div class="narrow"><p class="lead-p" style="font-size:19px;font-weight:400;color:var(--muted)">Studio is built by Colorteam, a design-led marketing agency that has spent nine years helping brands find their position in the market and grow from it. We know what makes a brand recognisable and what makes a post worth stopping for. That judgment is built into every Studio setup, and on Growth and Max, a Colorteam designer looks at your campaigns before they ship.</p><p class="lead-p" style="margin-top:18px"><b>The AI handles the volume. We handle the taste.</b></p></div>
-   <div class="pairs">
-    <figure class="pair">
-     <div class="pair-img"><img src="/assets/pair-event-before-600.webp" srcset="/assets/pair-event-before-600.webp 600w, /assets/pair-event-before.webp 1200w" sizes="(max-width:760px) 45vw, 170px" alt="Northline Summit, before: a generic AI-tool default design" loading="lazy" width="1200" height="900"><span>Before</span></div>
-     <div class="pair-img"><img src="/assets/pair-event-after-600.webp" srcset="/assets/pair-event-after-600.webp 600w, /assets/pair-event-after.webp 1200w" sizes="(max-width:760px) 45vw, 170px" alt="Northline Summit, after a Brand Foundation" loading="lazy" width="1200" height="900"><span class="on">After</span></div>
-     <figcaption><b>Northline Summit</b> · Event</figcaption>
-    </figure>
-    <figure class="pair">
-     <div class="pair-img"><img src="/assets/pair-stream-before-600.webp" srcset="/assets/pair-stream-before-600.webp 600w, /assets/pair-stream-before.webp 1200w" sizes="(max-width:760px) 45vw, 170px" alt="Kolo, before: a generic AI-tool default design" loading="lazy" width="1200" height="900"><span>Before</span></div>
-     <div class="pair-img"><img src="/assets/pair-stream-after-600.webp" srcset="/assets/pair-stream-after-600.webp 600w, /assets/pair-stream-after.webp 1200w" sizes="(max-width:760px) 45vw, 170px" alt="Kolo, after a Brand Foundation" loading="lazy" width="1200" height="900"><span class="on">After</span></div>
-     <figcaption><b>Kolo</b> · Streaming</figcaption>
-    </figure>
-    <figure class="pair">
-     <div class="pair-img"><img src="/assets/pair-saas-before-600.webp" srcset="/assets/pair-saas-before-600.webp 600w, /assets/pair-saas-before.webp 1200w" sizes="(max-width:760px) 45vw, 170px" alt="Ledgerly, before: a generic AI-tool default design" loading="lazy" width="1200" height="900"><span>Before</span></div>
-     <div class="pair-img"><img src="/assets/pair-saas-after-600.webp" srcset="/assets/pair-saas-after-600.webp 600w, /assets/pair-saas-after.webp 1200w" sizes="(max-width:760px) 45vw, 170px" alt="Ledgerly, after a Brand Foundation" loading="lazy" width="1200" height="900"><span class="on">After</span></div>
-     <figcaption><b>Ledgerly</b> · SaaS</figcaption>
-    </figure>
-   </div>
-   <p class="plan-note">Sample brands, built to show the shift. Real Foundations appear here as they launch.</p>
-  </div>
- </section>
-
- <section id="pricing">
-  <div class="wrap">
-   <div class="narrow sec-head"><h2>One Foundation. One subscription. <span class="soft">Pick how much you hand over.</span></h2></div>
-   <div class="steps">
-    <div class="step"><h3>Core</h3><div class="price">$149 <small>/ month</small></div><p>You approve and ship. Studio does the rest.</p></div>
-    <div class="step"><h3>Growth</h3><div class="price">$349 <small>/ month</small></div><p>Campaigns with landing pages, and a designer reviews each one.</p></div>
-    <div class="step"><h3>Max</h3><div class="price">$799 <small>/ month</small></div><p>A named reviewer owns your account. You stop logging in.</p></div>
-   </div>
-   <p class="plan-note">Already have brand guidelines? Skip the Foundation and pay a one-time setup fee instead. <a class="link" href="/pricing/">See full pricing</a></p>
-  </div>
- </section>
-
- <section id="faq">
-  <div class="wrap narrow faq">
-   <div class="sec-head" style="text-align:center"><h2>Questions? <span class="soft">We have answers.</span></h2></div>
+<section class="band dark tight" id="faq" data-title="Questions">
+ <div class="rail"><div>
+  <div class="sec-head" data-reveal><span class="eyebrow">Questions</span><h2>Asked before you sign up.</h2></div>
+  <div class="faq narrow" style="margin:0" data-reveal="1">
    <details><summary>Is this a design tool or a scheduler?</summary><p>Neither on its own. Studio decides what to post, designs it to your brand, writes the copy and schedules it. The scheduler is a connector inside it.</p></details>
    <details><summary>What if I don't like the brand direction?</summary><p>You see three directions before anything is built and you choose one. After it's locked, Studio keeps you consistent on purpose. If you want a new direction later, you can run a new Foundation.</p></details>
    <details><summary>How much of my time does it take?</summary><p>About twenty minutes a week on Core to review and approve. Less on Growth. On Max you can hand approvals to your reviewer entirely.</p></details>
    <details><summary>Can I edit what Studio makes?</summary><p>Yes. Every asset and every caption is editable before it ships.</p></details>
    <details><summary>Do I need to talk to a human to start?</summary><p>Core and Growth start from the pricing page. Max starts with a short call.</p></details>
-   <p class="plan-note"><a class="link" href="/faq/">All questions</a></p>
   </div>
- </section>
+  <p class="small" style="margin-top:20px"><a class="link" href="/faq/">All questions</a></p>
+ </div></div>
+</section>
 
- <div class="wrap">
-  <div class="final">
-   <h2>Your competitors are using the same tools you are. <span class="soft">Don't look like it.</span></h2>
-   <div class="ctas"><a class="btn btn-dark" href="/pricing/">See pricing</a><a class="btn btn-light" href="/book/">Book a 15-minute call</a></div>
-  </div>
- </div>
+<section class="band dark" id="start" data-title="Start">
+ <div class="rail"><div class="final">
+  <div class="glow"></div>
+  <h2 data-reveal>Your competitors are using the same tools you are. Don't look like it.</h2>
+  <div data-reveal="1"><div class="ctas"><a class="btn btn-dark" href="/pricing/">See pricing</a><a class="btn btn-light" href="/book/">Book a 15-minute call</a></div></div>
+ </div></div>
+</section>
 
 </main>
 
-<footer>
+<div class="progress" aria-hidden="true"><span class="pn">01 / 10</span><span class="pl">Studio</span><span class="pb"><i></i></span></div>
+
+<footer class="dark">
  <div class="wrap">
   <div class="foot-grid">
-   <div><a class="brand" href="/" style="margin-bottom:14px"><img src="/assets/wordmark-black.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a><p>A content system that learns your brand, designs on-brand posts and ships them to every channel. Set up by Colorteam, run by you.</p></div>
+   <div><a class="brand" href="/" style="margin-bottom:16px"><img src="/assets/wordmark-white.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a><p>A content system that learns your brand, designs on-brand posts and ships them to every channel. Set up by Colorteam, run by you.</p></div>
    <div><h5>Product</h5><a href="/how-it-works/">How it works</a><a href="/pricing/">Pricing</a><a href="/brand-foundation/">Brand Foundation</a><a href="/integrations/">Integrations</a><a href="/faq/">FAQ</a></div>
    <div><h5>Company</h5><a href="/about/">About</a><a href="/book/">Book a call</a><a href="/contact/">Contact</a><a href="https://staging.colorteam.io/">Agency site</a></div>
    <div><h5>Legal</h5><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="https://colorteam.io/studio/">Log in</a></div>
@@ -169,11 +184,7 @@
 </footer>
 
 <a class="badge" href="https://staging.colorteam.io/" title="This is the staging site">Staging</a>
-
-<script>
-(function(){var h=document.querySelector('header');function s(){h.classList.toggle('scrolled',window.scrollY>8)}addEventListener('scroll',s,{passive:true});s();
-var v=document.querySelector('.video video');if(v&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();v.controls=true;}})();
-</script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.18/lenis.min.js" defer></script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

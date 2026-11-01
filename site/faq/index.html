@@ -14,14 +14,14 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 
 <header id="top">
  <div class="wrap bar">
-  <a class="brand" href="/" aria-label="Colorteam Studio, home"><img src="/assets/wordmark-black.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a>
+  <a class="brand" href="/" aria-label="Colorteam Studio, home"><img src="/assets/wordmark-white.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a>
   <nav class="links" aria-label="Pages"><a href="/how-it-works/">How it works</a><a href="/pricing/">Pricing</a><a href="/about/">About</a></nav>
   <div class="bar-r">
    <a class="login" href="https://colorteam.io/studio/">Log in</a>
@@ -32,13 +32,13 @@
 
 <main>
 
- <div class="wrap page-hero">
+ <div class="band dark page-hero"><div class="rail"><div>
   <span class="eyebrow">FAQ</span>
   <h1>Questions? <span class="soft">We have answers.</span></h1>
   <p class="lede">If yours isn't here, <a class="link" href="/contact/">ask us</a> or <a class="link" href="/book/">book a call</a>.</p>
- </div>
+ </div></div></div>
  <section style="padding-top:40px">
-  <div class="wrap narrow faq">
+  <div class="rail"><div class="narrow faq">
 <h2 style="margin:48px 0 16px;font-size:20px">Getting started</h2>
 <details><summary>Is this a design tool or a scheduler?</summary><p>Neither on its own. Studio decides what to post, designs it to your brand, writes the copy and schedules it. The scheduler is a connector inside it.</p></details>
 <details><summary>Do I need a brand already?</summary><p>No. If you don't have guidelines, a Brand Foundation comes first: Colorteam defines your brand and builds your Studio on top of it. If you do have guidelines, you skip the Foundation and pay a one-time Studio Setup fee instead.</p></details>
@@ -61,7 +61,7 @@
 <details><summary>Is there a free plan?</summary><p>No. Free plans show you what the AI can do. We'd rather show you what your brand looks like when someone with taste sets it up. Try Core for 14 days at the monthly rate.</p></details>
 <details><summary>Can I cancel?</summary><p>Any time, from your account. Service runs to the end of the paid period. Annual plans with the Foundation fee waived settle the Foundation pro rata if cancelled before twelve months.</p></details>
 <details><summary>Can I change tier later?</summary><p>Yes. Upgrades apply immediately; the Foundation difference is billed once. Downgrades apply from your next renewal.</p></details>
-  </div>
+  </div></div>
  </section>
 
  <div class="wrap">
@@ -73,10 +73,10 @@
 
 </main>
 
-<footer>
+<footer class="dark">
  <div class="wrap">
   <div class="foot-grid">
-   <div><a class="brand" href="/" style="margin-bottom:14px"><img src="/assets/wordmark-black.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a><p>A content system that learns your brand, designs on-brand posts and ships them to every channel. Set up by Colorteam, run by you.</p></div>
+   <div><a class="brand" href="/" style="margin-bottom:16px"><img src="/assets/wordmark-white.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a><p>A content system that learns your brand, designs on-brand posts and ships them to every channel. Set up by Colorteam, run by you.</p></div>
    <div><h5>Product</h5><a href="/how-it-works/">How it works</a><a href="/pricing/">Pricing</a><a href="/brand-foundation/">Brand Foundation</a><a href="/integrations/">Integrations</a><a href="/faq/">FAQ</a></div>
    <div><h5>Company</h5><a href="/about/">About</a><a href="/book/">Book a call</a><a href="/contact/">Contact</a><a href="https://staging.colorteam.io/">Agency site</a></div>
    <div><h5>Legal</h5><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="https://colorteam.io/studio/">Log in</a></div>
@@ -86,11 +86,7 @@
 </footer>
 
 <a class="badge" href="https://staging.colorteam.io/" title="This is the staging site">Staging</a>
-
-<script>
-(function(){var h=document.querySelector('header');function s(){h.classList.toggle('scrolled',window.scrollY>8)}addEventListener('scroll',s,{passive:true});s();
-var v=document.querySelector('.video video');if(v&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();v.controls=true;}})();
-</script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.18/lenis.min.js" defer></script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

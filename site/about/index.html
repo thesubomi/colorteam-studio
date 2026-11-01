@@ -14,14 +14,14 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 
 <header id="top">
  <div class="wrap bar">
-  <a class="brand" href="/" aria-label="Colorteam Studio, home"><img src="/assets/wordmark-black.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a>
+  <a class="brand" href="/" aria-label="Colorteam Studio, home"><img src="/assets/wordmark-white.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a>
   <nav class="links" aria-label="Pages"><a href="/how-it-works/">How it works</a><a href="/pricing/">Pricing</a><a href="/about/" class="on" aria-current="page">About</a></nav>
   <div class="bar-r">
    <a class="login" href="https://colorteam.io/studio/">Log in</a>
@@ -32,14 +32,14 @@
 
 <main>
 
- <div class="wrap page-hero">
+ <div class="band dark page-hero"><div class="rail"><div>
   <span class="eyebrow">About</span>
   <h1>Built by designers who got tired of watching <span class="soft">good products go unnoticed.</span></h1>
   <p class="lede">Studio comes from Colorteam, a design-led marketing agency that has spent nine years helping brands find their position in the market, reach the right audience and grow revenue through sharp go-to-market execution.</p>
- </div>
+ </div></div></div>
 
  <section>
-  <div class="wrap prose">
+  <div class="rail"><div class="prose">
    <h2>Why Studio exists</h2>
    <p>For nine years we watched the same thing happen. A founder builds something worth talking about. They get a brand made, or they don't. Then the posting starts, stalls, and stops, because every post costs an hour nobody has.</p>
    <p>AI changed the cost of making content. It did nothing for the cost of making it good. Now every startup can ship a hundred posts a month, and they all look the same. So the founders we work with were asking for two things at once: make us recognisable, and make the posting stop being a job.</p>
@@ -62,7 +62,7 @@
    <h2>The Agency</h2>
    <p>Studio is the product. Colorteam is the agency behind it. If you need a full rebrand, a campaign, or a marketing partner beyond what Studio does, that's us too.</p>
    <p><a class="link" href="https://staging.colorteam.io/">Visit the Agency site</a></p>
-  </div>
+  </div></div>
  </section>
 
  <div class="wrap">
@@ -74,10 +74,10 @@
 
 </main>
 
-<footer>
+<footer class="dark">
  <div class="wrap">
   <div class="foot-grid">
-   <div><a class="brand" href="/" style="margin-bottom:14px"><img src="/assets/wordmark-black.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a><p>A content system that learns your brand, designs on-brand posts and ships them to every channel. Set up by Colorteam, run by you.</p></div>
+   <div><a class="brand" href="/" style="margin-bottom:16px"><img src="/assets/wordmark-white.svg" alt="colorteam" width="90" height="16"><b>Studio</b></a><p>A content system that learns your brand, designs on-brand posts and ships them to every channel. Set up by Colorteam, run by you.</p></div>
    <div><h5>Product</h5><a href="/how-it-works/">How it works</a><a href="/pricing/">Pricing</a><a href="/brand-foundation/">Brand Foundation</a><a href="/integrations/">Integrations</a><a href="/faq/">FAQ</a></div>
    <div><h5>Company</h5><a href="/about/">About</a><a href="/book/">Book a call</a><a href="/contact/">Contact</a><a href="https://staging.colorteam.io/">Agency site</a></div>
    <div><h5>Legal</h5><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="https://colorteam.io/studio/">Log in</a></div>
@@ -87,11 +87,7 @@
 </footer>
 
 <a class="badge" href="https://staging.colorteam.io/" title="This is the staging site">Staging</a>
-
-<script>
-(function(){var h=document.querySelector('header');function s(){h.classList.toggle('scrolled',window.scrollY>8)}addEventListener('scroll',s,{passive:true});s();
-var v=document.querySelector('.video video');if(v&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();v.controls=true;}})();
-</script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.18/lenis.min.js" defer></script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
