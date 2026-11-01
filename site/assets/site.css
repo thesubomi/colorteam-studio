@@ -245,7 +245,8 @@ footer .brand{color:var(--cream)}
 .founder-img{border-radius:var(--r-md);overflow:hidden;aspect-ratio:4/5;background:var(--panel)}
 .founder-img img{width:100%;height:100%;object-fit:cover;display:block}
 .founder-txt{padding:8px 8px 8px 0}
-.founder-txt h3{margin:0 0 10px;font-size:22px}
+.founder-txt h3{margin:0 0 4px;font-size:22px}
+.founder-txt .role{margin:0 0 16px;font-size:14px;font-weight:400;color:var(--muted)}
 .founder-txt p{margin:0;color:var(--muted)}
 @media (max-width:760px){.founder{grid-template-columns:minmax(0,1fr);gap:20px;padding:16px}.founder-txt{padding:0}}
 
