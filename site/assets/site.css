@@ -9,7 +9,7 @@
   --ease:cubic-bezier(.22,1,.36,1);
 }
 /* theme roles: light is the body default, .dark flips a band */
-body,.light{--surface:var(--cream);--ink:var(--black);--muted:var(--graphite);--line:rgba(87,85,77,.28);--line-strong:var(--graphite);--panel:var(--putty);--panel-2:rgba(180,178,165,.35);--accent:var(--black);--action:var(--black);--on-action:var(--cream)}
+body,.light{--surface:#fbfbfa;--ink:var(--black);--muted:var(--graphite);--line:rgba(24,24,27,.12);--line-strong:rgba(24,24,27,.5);--panel:#f1f1ee;--panel-2:#f6f6f4;--accent:var(--black);--action:var(--black);--on-action:#fff}
 .dark{--surface:var(--black);--ink:var(--cream);--muted:var(--stone);--line:rgba(146,154,146,.22);--line-strong:var(--stone);--panel:var(--carbon);--panel-2:#1f1f1f;--accent:var(--pink);--action:var(--pink);--on-action:var(--black)}
 
 *{box-sizing:border-box}
