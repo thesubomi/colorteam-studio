@@ -150,7 +150,8 @@ header .btn-dark{background:var(--pink);color:var(--black);border-color:var(--pi
 
 /* footer, always dark */
 footer{background:var(--black);color:var(--stone);font-size:14px;padding:64px 0 40px;border-top:1px solid rgba(146,154,146,.18)}
-footer .brand{color:var(--cream)}
+footer .brand{color:var(--cream);display:inline-flex;align-items:center;gap:12px;padding:0}
+footer .brand b{display:inline;padding-left:12px;border-left:1px solid rgba(146,154,146,.4)}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;padding-bottom:40px;border-bottom:1px solid rgba(146,154,146,.18);margin-bottom:24px}
 .foot-grid h5{margin:0 0 14px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--pink)}
 .foot-grid a{display:block;text-decoration:none;color:var(--stone);padding:4px 0;transition:color .2s}
