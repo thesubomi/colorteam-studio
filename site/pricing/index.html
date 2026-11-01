@@ -42,7 +42,7 @@
   <div class="wrap">
    <div class="plans three">
 
-    <div class="plan" data-plan="core" data-found="990">
+    <div class="plan" data-plan="core" data-found="990" data-setup="330" data-link-base="https://buy.stripe.com/test_dRmaEWgX77cVbSE5MrgEg00" data-link-addon="https://buy.stripe.com/test_cNi14mcGR7cVg8U5MrgEg01" data-link-setup="https://buy.stripe.com/test_3cIdR8gX78gZf4QeiXgEg04">
      <span class="tag">Core</span>
      <div class="price">$149 <small>/ month</small></div>
      <p class="found">+ <b>$<span class="found-amt">990</span></b> Brand Foundation, one time</p>
@@ -50,11 +50,12 @@
      <h4>Brand Foundation includes</h4><ul><li>Three mood-board directions: fonts, colours, sample posts</li><li>Your existing logo kept or lightly refined</li><li>One refinement round</li><li>Full brand guidelines document</li><li>Studio templates for stills and carousels</li><li>Ready in 7 working days</li></ul>
      <h4>Every month</h4><ul><li>Up to 12 on-brand posts</li><li>AI copy for every channel</li><li>One scheduling connector</li><li>UTM links on every post</li><li>Performance benchmark before you publish</li><li>You approve, edit and ship from one dashboard</li></ul>
      <div class="toggle"><input type="checkbox" id="t-logo" data-add="490"><label for="t-logo"><b>I don't have a logo yet +$490</b><span>One typographic wordmark, one round. Want a full mark? That's Growth.</span></label></div>
+     <div class="toggle"><input type="checkbox" id="g-core" data-guidelines><label for="g-core"><b>I already have brand guidelines</b><span>Skip the Foundation. Pay a one-time Studio Setup of $330 instead.</span></label></div>
      <p class="total">Today: <b>$<span class="total-amt">990</span></b> one time, then $149/month</p>
-     <a class="btn btn-light" href="#" data-stripe="core" title="Stripe checkout link: to be added">Start with Core</a>
+     <a class="btn btn-light" href="https://buy.stripe.com/test_dRmaEWgX77cVbSE5MrgEg00" data-stripe="core">Start with Core</a>
     </div>
 
-    <div class="plan hi" data-plan="growth" data-found="1490">
+    <div class="plan hi" data-plan="growth" data-found="1490" data-setup="490" data-link-base="https://buy.stripe.com/test_5kQ00i5epdBj3m8eiXgEg02" data-link-addon="https://buy.stripe.com/test_cNi14mdKVcxf5ug7UzgEg03" data-link-setup="https://buy.stripe.com/test_dRm4gy22dcxf5ug5MrgEg05">
      <span class="tag">Growth</span>
      <div class="price">$349 <small>/ month</small></div>
      <p class="found">+ <b>$<span class="found-amt">1,490</span></b> Brand Foundation, one time</p>
@@ -62,8 +63,9 @@
      <h4>Brand Foundation includes</h4><ul><li>Everything in Core</li><li>Full logo redesign with a social mini mark</li><li>Positioning statement and messaging pillars</li><li>Video and campaign landing page templates</li><li>Two refinement rounds</li><li>Ready in 10 working days</li></ul>
      <h4>Every month</h4><ul><li>Up to 24 posts, short-form video included</li><li>One campaign with its own landing page</li><li>GA4 connected, monthly performance summary</li><li>Human review pass on every campaign</li></ul>
      <div class="toggle"><input type="checkbox" id="t-site" data-add="1500"><label for="t-site"><b>I need a website too +$1,500</b><span>Up to five pages on your new system. Or step up to Max and it's included.</span></label></div>
+     <div class="toggle"><input type="checkbox" id="g-growth" data-guidelines><label for="g-growth"><b>I already have brand guidelines</b><span>Skip the Foundation. Pay a one-time Studio Setup of $490 instead.</span></label></div>
      <p class="total">Today: <b>$<span class="total-amt">1,490</span></b> one time, then $349/month</p>
-     <a class="btn btn-dark" href="#" data-stripe="growth" title="Stripe checkout link: to be added">Start with Growth</a>
+     <a class="btn btn-dark" href="https://buy.stripe.com/test_5kQ00i5epdBj3m8eiXgEg02" data-stripe="growth">Start with Growth</a>
     </div>
 
     <div class="plan" data-plan="max" data-found="2490">
@@ -114,7 +116,20 @@
 var v=document.querySelector('.video video');if(v&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();v.controls=true;}})();
 </script>
 <script>
-(function(){document.querySelectorAll('.plan').forEach(function(p){var base=+p.dataset.found;var box=p.querySelector('.toggle input');var out=p.querySelector('.total-amt');if(!box||!out)return;function u(){var t=base+(box.checked?+box.dataset.add:0);out.textContent=t.toLocaleString('en-US');}box.addEventListener('change',u);u();});})();
+(function(){document.querySelectorAll('.plan').forEach(function(p){
+ var found=+p.dataset.found, setup=+p.dataset.setup||0;
+ var add=p.querySelector('.toggle input[data-add]'), guide=p.querySelector('.toggle input[data-guidelines]');
+ var out=p.querySelector('.total-amt'), btn=p.querySelector('a[data-stripe]');
+ if(!out)return;
+ function u(){
+  var hasGuide=guide&&guide.checked, hasAdd=add&&add.checked;
+  if(add){add.disabled=!!hasGuide; if(hasGuide){add.checked=false;hasAdd=false;} add.closest('.toggle').style.opacity=hasGuide?.45:1;}
+  var t=hasGuide?setup:found+(hasAdd?+add.dataset.add:0);
+  out.textContent=t.toLocaleString('en-US');
+  if(btn){btn.href=hasGuide?p.dataset.linkSetup:(hasAdd?p.dataset.linkAddon:p.dataset.linkBase);}
+ }
+ add&&add.addEventListener('change',u); guide&&guide.addEventListener('change',u); u();
+});})();
 </script>
 </body>
 </html>
