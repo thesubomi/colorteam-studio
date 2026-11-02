@@ -9,6 +9,9 @@
   function onScroll() { if (h) h.classList.toggle('scrolled', window.scrollY > 8); }
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
+  var tt=document.querySelector('.totop');
+  if(tt){addEventListener('scroll',function(){tt.classList.toggle('show',window.scrollY>innerHeight*0.8)},{passive:true});}
+
   /* hero video: controls if reduced motion */
   var v = document.querySelector('.video video');
   if (v && reduce) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; }
