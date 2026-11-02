@@ -71,7 +71,7 @@ header .btn-dark{background:var(--pink);color:var(--black);border-color:var(--pi
 
 /* switch (Agency | Studio) */
 .switch{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:rgba(222,220,208,.08);border:1px solid rgba(222,220,208,.14)}
-.switch a{padding:8px 20px;border-radius:999px;font-size:15px;line-height:18px;font-weight:600;font-family:Inter,"Helvetica Neue",Arial,sans-serif;color:#fff;text-decoration:none;transition:background .2s,color .2s}
+.switch a{padding:8px 20px;border-radius:999px;font-size:15px;line-height:18px;font-weight:600;font-family:Inter,"Helvetica Neue",Arial,sans-serif;color:#dedcd0;text-decoration:none;transition:background .2s,color .2s}
 .switch a:hover{color:#fff;background:rgba(222,220,208,.08)}
 .switch a.on{background:var(--pink);color:var(--black)}
 
