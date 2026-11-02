@@ -4,7 +4,7 @@
   --pink:#f2b0cd;--leaf:#83cf55;--lime:#a8fc78;--white:#fff;
   --r-sm:8px;--r-md:12px;--r-lg:20px;--r-xl:32px;--r-full:9999px;
   --max:1200px;--gut:24px;
-  --sans:"SF Pro Display",-apple-system,BlinkMacSystemFont,Inter,system-ui,sans-serif;
+  --sans:Inter,"Helvetica Neue",Arial,system-ui,sans-serif;
   --serif:Newsreader,Georgia,serif;
   --ease:cubic-bezier(.22,1,.36,1);
 }
@@ -70,8 +70,8 @@ nav.links a.on{color:var(--cream);background:rgba(255,255,255,.07)}
 header .btn-dark{background:var(--pink);color:var(--black);border-color:var(--pink)}
 
 /* switch (Agency | Studio) */
-.switch{display:inline-flex;gap:4px;padding:4px;border-radius:var(--r-full);background:rgba(222,220,208,.08);border:1px solid rgba(222,220,208,.14)}
-.switch a{padding:8px 20px;border-radius:var(--r-full);font-size:15px;line-height:1.2;font-weight:600;color:#fff;text-decoration:none;transition:background .2s,color .2s}
+.switch{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:rgba(222,220,208,.08);border:1px solid rgba(222,220,208,.14)}
+.switch a{padding:8px 20px;border-radius:999px;font-size:15px;line-height:18px;font-weight:600;font-family:Inter,"Helvetica Neue",Arial,sans-serif;color:#fff;text-decoration:none;transition:background .2s,color .2s}
 .switch a:hover{color:#fff;background:rgba(222,220,208,.08)}
 .switch a.on{background:var(--pink);color:var(--black)}
 
