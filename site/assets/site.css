@@ -343,4 +343,4 @@ footer .brand b{display:inline;padding-left:12px;border-left:1px solid rgba(146,
 .totop:hover{background:var(--pink);color:var(--black)}
 @media (max-width:760px){.hero{margin-bottom:-120px}.hero::before{bottom:120px}#problem{padding-top:calc(80px + 120px)}}
 
-.plan-h{display:flex;align-items:center;gap:8px}.ai-pill{display:inline-flex;align-items:center;font-size:11px;font-weight:600;letter-spacing:.04em;line-height:1;padding:4px 9px;border-radius:var(--r-full);background:var(--pink);color:#000}
+.plan-h{display:flex;align-items:center;gap:8px}.ai-pill{display:inline-flex;align-items:center;font-size:11px;font-weight:600;letter-spacing:.04em;line-height:1;padding:3px 8px;border-radius:var(--r-full);background:transparent;border:1px solid #000;color:#000}
