@@ -19,9 +19,9 @@
     "#ct-gate h1{margin:0 0 6px;font-size:26px;line-height:1.15;letter-spacing:-.02em;font-weight:500;color:#dedcd0}" +
     "#ct-gate p{margin:0 0 24px;color:#929a92;font-size:15px}" +
     "#ct-gate input{width:100%;height:48px;padding:0 16px;border-radius:12px;border:1.5px solid rgba(146,154,146,.35);background:#000;color:#fff;font:inherit;outline:none}" +
-    "#ct-gate input:focus{border-color:#f2b0cd}" +
-    "#ct-gate button{width:100%;height:48px;margin-top:12px;border:0;border-radius:12px;background:#f2b0cd;color:#000;font:600 15px/1 inherit;font-family:inherit;cursor:pointer}" +
-    "#ct-gate .err{min-height:20px;margin:10px 0 0;font-size:14px;color:#f2b0cd}";
+    "#ct-gate input:focus{border-color:#a8fc78}" +
+    "#ct-gate button{width:100%;height:48px;margin-top:12px;border:0;border-radius:12px;background:#a8fc78;color:#000;font:600 15px/1 inherit;font-family:inherit;cursor:pointer}" +
+    "#ct-gate .err{min-height:20px;margin:10px 0 0;font-size:14px;color:#a8fc78}";
   (d.head || root).appendChild(css);
 
   function sha256(text) {
